@@ -1,0 +1,39 @@
+@use '../../style/variables' as v;
+@use '../../style/mixins' as mx;
+
+.btn{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 13px;
+    padding: 19px 30px;
+    background-color: v.$color-Yellow;
+    color: v.$color-White;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    transition: background-color v.$transition-300 , transform v.$transition-300;
+
+    &:hover{
+        background-color: v.$color-Chrome-Yellow;
+        transform: scale(1.05);
+    }
+
+    &-auth{
+        padding: 0;
+        background:none;
+        border: 1px solid v.$color-Boulder;
+        padding: 8px 12px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 183%;
+        vertical-align: middle;
+        border-radius: 10px;
+        color: v.$color-White;
+        transition: background-color v.$transition-300 , transform v.$transition-300;
+
+        &:hover{
+            background-color: v.$color-Chrome-Yellow;
+            transform: scale(1.05);
+        }
+    }
+}

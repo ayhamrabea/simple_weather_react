@@ -1,0 +1,41 @@
+@use '../../style/variables' as v;
+@use '../../style/mixins' as mx;
+
+.hero{
+    position: relative;
+    background: url('/hero.jpg') center/cover no-repeat;
+    width: 100%;
+    z-index: 1;
+    margin: -102px 0 60px;
+    position: relative
+    ;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.452);
+    }
+
+    &__title{
+        position: relative;
+        font-weight: 700;
+        font-size: 48px;
+        text-transform: uppercase;
+        color: v.$color-White;
+        text-align: center;
+        padding: 208px 0 142px 0;
+        margin: 0;
+
+        @include mx.vp-1023 {
+            font-size: 36px;
+        }
+
+        @include mx.vp-767 {
+            font-size: 20px;
+        }
+
+    }
+}
